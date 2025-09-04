@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Teacher's Day | Umme Salma Mam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" type="image/png" href="Umme salma mam1.jpg">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --peach: #ffd8c9;
+            --lavender: #e2d1f9;
+            --cream: #fff6e9;
+            --sky-blue: #c4f5f9;
+            --pastel-pink: #ffc8dd;
+            --pastel-mint: #caf0f8;
+            --text-dark: #333;
+            --text-light: #666;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, var(--peach) 0%, var(--lavender) 50%, var(--sky-blue) 100%);
+            background-attachment: fixed;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Glassmorphism Utility Class */
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Dancing Script', cursive;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #5a189a;
+        }
+
+        p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 1.5rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section-content {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+            opacity: 0.15;
+        }
+
+        .hero-bg-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28vw;
+            font-weight: 700;
+            color: rgba(89, 24, 154, 0.349);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            user-select: none;
+        }
+
+        .hero-content {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-heading {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 2s ease-out, glow 3s infinite alternate;
+        }
+
+        .hero-subheading {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            min-height: 2.5rem;
+        }
+
+        /* Dedication Section */
+        #dedication {
+            background: linear-gradient(to bottom, var(--pastel-pink), var(--pastel-mint));
+        }
+
+        .dedication-card {
+            padding: 2.5rem;
+            margin: 0 auto;
+            max-width: 800px;
+            text-align: center;
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        /* Poem Section */
+        #poem {
+            background-color: var(--cream);
+        }
+
+        .poem-content {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            line-height: 1.8;
+            padding: 2rem;
+        }
+
+        /* Quotes Section */
+        #quotes {
+            background: linear-gradient(to bottom, var(--pastel-mint), var(--lavender));
+        }
+
+        .quotes-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .quote-card {
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .quote-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .quote-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        /* Interactive Section */
+        #interactive {
+            background: linear-gradient(to bottom, var(--lavender), var(--peach));
+            text-align: center;
+        }
+
+        .surprise-button {
+            padding: 1rem 2.5rem;
+            font-size: 1.3rem;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .surprise-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(107, 107, 107, 0.7);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            padding: 3rem;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .modal-text {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .heart {
+            color: #e91e63;
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Confetti */
+        .confetti-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1001;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            opacity: 0;
+            border-radius: 50%;
+            animation: fall linear forwards;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+            to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.5); }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fall {
+            0% {
+                opacity: 1;
+                transform: translateY(-100px) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        .typewriter {
+            overflow: hidden;
+            border-right: 3px solid rgba(90, 24, 154, 0.7);
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: rgba(90, 24, 154, 0.7); }
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 4rem;
+            }
+            
+            h2 {
+                font-size: 3rem;
+            }
+            
+            .hero-heading {
+                font-size: 4rem;
+            }
+            
+            .hero-subheading {
+                font-size: 1.8rem;
+            }
+            
+            .quotes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .hero-bg-text {
+                font-size: 20rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .typewriter {
+                white-space: normal;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg">
+            <div class="hero-bg-text">Umme Salma</div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-heading">To My Extraordinary Teacher </h1>
+            <p class="hero-subheading" id="typewriter"></p>
+        </div>
+    </section>
+
+    <!-- Dedication Section -->
+    <section id="dedication">
+        <div class="section-content">
+            <h2> 💌 A Letter from My Heart</h2>
+            <div class="glass dedication-card">
+                <p>Dear Salma Mam,<br>
+                 Whenever I think about the people who shaped me....Your name always comes first.. 
+                You did not just teach me lessons from book.. You taught me how to look at life differently... 
+            to trust myself.. and to keep moving forward even when things were difficult..<br>
+        For me.. <strong>Teacher’s Day</strong>... is not just a date on the calender.... It is a reminder of
+    how lucky I am to have you in my journey... The way you explain.. the way you guide.. and the way you believe in me...  
+     it feels less like teaching and more like lighting a flame that keeps me going.....<br>
+    Sometimes I wonder.... If you were not there in my journey..Would I still have the same courage and clarity?.. 
+     Probably not... That's how big your impact is on me....<br>
+     So Today... I don't just wish you a <strong>HAPPY Teacher’s DAY</strong>... I celebrate tou for being my mentor.. my
+     guide.. and someone whose words live in my heart every single day...<br><br>
+    
+      With Heartfelt gratitude..<br>
+    Maaz</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Poem Section -->
+    <section id="poem">
+        <div class="section-content">
+            <h2>A Special Poem</h2>
+            <div class="poem-content">
+                <p>Har girne par haath pakda.. himmat se khada kar diya..<br>
+Apne dukh chhupakar.. meri raahon ko roshan kar diya..<br><br>
+
+Unki daant bhi seekh thi.. unki muskaan bhi dua..<br>
+Galat ko roka.. sahi ke raste par chalna sikha diya..<br><br>
+
+Mere sapne sajte gaye unki mehnat ki roshni se..<br>
+Aur unhone apne armaan qurbaan kar diye, bas meri zindagi ke liye..<br><br>
+                Happy Teacher's Day!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quotes Section -->
+    <section id="quotes">
+        <div class="section-content">
+            <h2>Inspiring Words</h2>
+            <div class="quotes-grid">
+                <div class="glass quote-card">
+                    <p class="quote-text">"A teacher takes a hand, opens a mind, and touches a heart."</p>
+                </div>
+                <div class="glass quote-card">
+                    <p class="quote-text">"The influence of a good teacher can never be erased."</p>
+                </div>
+                <div class="glass quote-card">
+                    <p class="quote-text">"Teaching is the profession that creates all other professions."</p>
+                </div>
+                <div class="glass quote-card">
+                    <p class="quote-text">"Behind every successful student, there is an extraordinary teacher."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Section -->
+    <section id="interactive">
+        <div class="section-content">
+            <h2>A Special Surprise</h2>
+            <button class="surprise-button glass" id="surprise-btn">Open Your Card 🎁</button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content glass">
+            <button class="close-btn" id="close-btn">×</button>
+            <p class="modal-text">Happy Teacher's Day ❤️<br>— From Maaz</p>
+        </div>
+    </div>
+
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-text">
+            <p>Dear Mam.. This website is a reflection of your teachings... You will always be my strength. <span class="heart">❤️</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const typewriterElement = document.getElementById('typewriter');
+        const surpriseBtn = document.getElementById('surprise-btn');
+        const modal = document.getElementById('modal');
+        const closeBtn = document.getElementById('close-btn');
+        const confettiContainer = document.getElementById('confetti-container');
+
+        // Typewriter Effect
+        const typewriterText = "A heartfelt tribute to the mentor who changed my life from a distance.";
+        let typewriterIndex = 0;
+
+        function typeWriter() {
+            if (typewriterIndex < typewriterText.length) {
+                typewriterElement.innerHTML += typewriterText.charAt(typewriterIndex);
+                typewriterIndex++;
+                setTimeout(typeWriter, 100);
+            } else {
+                // Add blinking cursor after finishing
+                typewriterElement.classList.add('typewriter');
+            }
+        }
+
+        // Start typewriter effect when page loads
+        window.addEventListener('load', typeWriter);
+
+        // Scroll Animations
+        const animatedElements = document.querySelectorAll('.dedication-card, .poem-content, .quote-card');
+        
+        function checkScroll() {
+            animatedElements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.animation = 'fadeInUp 1s forwards';
+                    element.style.opacity = '0';
+                }
+            });
+        }
+
+        // Initial check and add scroll event listener
+        checkScroll();
+        window.addEventListener('scroll', checkScroll);
+
+        // Modal and Confetti
+        surpriseBtn.addEventListener('click', () => {
+            modal.classList.add('active');
+            createConfetti();
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.remove('active');
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+            }
+        });
+
+        // Confetti Creation
+        function createConfetti() {
+            // Clear previous confetti
+            confettiContainer.innerHTML = '';
+            
+            const colors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#9bf6ff', '#a0c4ff', '#bdb2ff', '#ffc6ff'];
+            const confettiCount = 100;
+            
+            for (let i = 0; i < confettiCount; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                
+                // Random properties
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                const size = Math.random() * 10 + 5;
+                const posX = Math.random() * 100;
+                const duration = Math.random() * 5 + 3;
+                const delay = Math.random() * 2;
+                
+                // Apply styles
+                confetti.style.left = `${posX}%`;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size}px`;
+                confetti.style.backgroundColor = color;
+                confetti.style.animationDuration = `${duration}s`;
+                confetti.style.animationDelay = `${delay}s`;
+                
+                confettiContainer.appendChild(confetti);
+            }
+            
+            // Remove confetti after animation completes
+            setTimeout(() => {
+                confettiContainer.innerHTML = '';
+            }, 8000);
+        }
+    </script>
+    <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search
+          .slice(1)
+          .split("&")
+          .map(function (s) {
+            return s.replace(/and/g, "&");
+          })
+          .join("?");
+        window.history.replaceState(
+          null,
+          null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    })(window.location);
+  </script>
+</body>
+</html>
