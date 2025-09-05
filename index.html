@@ -357,7 +357,9 @@
         .typewriter {
             overflow: hidden;
             border-right: 3px solid rgba(90, 24, 154, 0.7);
-            white-space: nowrap;
+            white-space: normal;
+            word-break: break-word;
+            font-size: clamp(1rem, 4vw, 1.4rem);
             margin: 0 auto;
             animation: typewriter 3s steps(40, end), blink-caret 0.75s step-end infinite;
         }
@@ -378,11 +380,13 @@
             }
             
             .hero-heading {
-                font-size: 4rem;
+                font-size: clamp(1.8rem, 6vw, 3rem);
+                text-align: center;
             }
             
             .hero-subheading {
-                font-size: 1.8rem;
+                font-size: clamp(1rem, 4vw, 1.4rem);
+                text-align: center;
             }
             
             .quotes-grid {
@@ -617,5 +621,6 @@ Aur unhone apne armaan qurbaan kar diye, bas meri zindagi ke liye..<br><br>
       }
     })(window.location);
   </script>
+  
 </body>
 </html>
